@@ -1,45 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+
+import 'assets/vendor/nucleo/css/nucleo.css';
+import 'assets/vendor/font-awesome/css/font-awesome.min.css';
+import 'assets/scss/argon-design-system-react.scss?v1.1.0';
+
+import Index from './views/Index.js';
+import ArticlesList from './views/ArticlesList.js';
+import Article from './views/Article.js';
+import Notfound from 'components/Notfound.js';
 
 function App() {
-    const [response, setResponse] = useState('Oops, something went wrong...')
-    useEffect(() =>{
-        async function checkAPIRoute() {
-            try {
-                const host = process.env.REACT_APP_HOST || "http://localhost:5000"
-                const response = await fetch(
-                    `${host}/api`
-                )
-                if (response.status === 200) {
-                    setResponse("a Success!!!")
-                }
-            } catch (err) {
-                setResponse("Oops, something went wrong...")
-            }
-        }
-        checkAPIRoute()
-    }, [response])
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Mern-app</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
-        <h1>The API call is...</h1>
-          <h2>{response}</h2>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact render={(props) => <Index {...props} />} />
+          <Route
+            path="/add-article"
+            exact
+            render={(props) => <Article {...props} />}
+          />
+          <Route
+            path="/not-found"
+            exact
+            render={(props) => <Notfound {...props} />}
+          />
+          <Route
+            path="/articles/:type/:tag"
+            exact
+            render={(props) => <ArticlesList {...props} />}
+          />
+          <Redirect to="/not-found" />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 }
 
