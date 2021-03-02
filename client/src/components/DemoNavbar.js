@@ -88,9 +88,7 @@ class DemoNavbar extends React.Component {
                       <Link to="/">
                         <img
                           alt="..."
-                          src={
-                            require('assets/img/brand/argon-react.png').default
-                          }
+                          src={require('assets/img/brand/logo.png').default}
                         />
                       </Link>
                     </Col>
@@ -106,7 +104,7 @@ class DemoNavbar extends React.Component {
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Tutorials</span>
+                      <span className="nav-link-inner--text">Courses</span>
                     </DropdownToggle>
                     <DropdownMenu className="dropdown-menu-xl">
                       <div className="dropdown-menu-inner">
@@ -152,7 +150,7 @@ class DemoNavbar extends React.Component {
                           href="/articles/react/core"
                         >
                           <div className="icon icon-shape bg-gradient-info rounded-circle text-white">
-                          <img
+                            <img
                               alt="..."
                               className="img-fluid"
                               src={
@@ -175,7 +173,7 @@ class DemoNavbar extends React.Component {
                           href="/articles/vuejs/core"
                         >
                           <div className="icon icon-shape bg-gradient-success rounded-circle text-white">
-                          <img
+                            <img
                               alt="..."
                               className="img-fluid"
                               src={
@@ -232,6 +230,19 @@ class DemoNavbar extends React.Component {
                       </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
+                  <NavItem>
+                    <NavLink
+                      className="nav-link-icon"
+                      href="/blog"
+                      id="tooltip333589075"
+                    >
+                      <span className="nav-link-inner--text">Blog</span>
+                    </NavLink>
+                    <UncontrolledTooltip delay={0} target="tooltip333589075">
+                      Articles written by the most talented people around the
+                      world!
+                    </UncontrolledTooltip>
+                  </NavItem>
                 </Nav>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem>

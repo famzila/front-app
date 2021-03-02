@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 import { CardImg, Card, Container, Row, Col } from 'reactstrap';
 
 // core components
-import DemoNavbar from './DemoNavbar.js';
-import SimpleFooter from './Footers/SimpleFooter.js';
 
-class Notfound extends React.Component {
+import SimpleFooter from '../components/Footers/SimpleFooter.js';
+
+class Notfound extends React.PureComponent{
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
@@ -17,7 +17,6 @@ class Notfound extends React.Component {
   render() {
     return (
       <>
-        <DemoNavbar />
         <main ref="main">
           <section className="section section-shaped section-lg">
             <div className="shape shape-style-1 bg-gradient-default">

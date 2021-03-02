@@ -20,9 +20,9 @@ class SimpleFooter extends React.Component {
           <Container>
             <Row className=" row-grid align-items-center mb-5">
               <Col lg="6">
-                <h3 className=" text-primary font-weight-light mb-2">
+                <h1 className=" text-primary special-title mb-2">
                   Thank you for supporting us!
-                </h3>
+                </h1>
                 <h4 className=" mb-0 font-weight-light">
                   Let's get in touch on
                 </h4>
@@ -68,7 +68,7 @@ class SimpleFooter extends React.Component {
                   </span>
                 </Button>
                 <UncontrolledTooltip delay={0} target="tooltip837440414">
-                                Follow us
+                  Follow us
                 </UncontrolledTooltip>
                 <Button
                   className="btn-icon-only rounded-circle ml-1"
@@ -90,31 +90,17 @@ class SimpleFooter extends React.Component {
             <Row className=" align-items-center justify-content-md-between">
               <Col md="6">
                 <div className=" copyright">
-                  © {new Date().getFullYear()}{' '}
-                  <a
-                    href="/"
-                    target="_blank"
-                  >
-                    Front Team
-                  </a>
-                  .
+                  © {new Date().getFullYear()} <a href="/">FAM</a>
                 </div>
               </Col>
               <Col md="6">
                 <Nav className=" nav-footer justify-content-end">
                   <NavItem>
-                    <NavLink href="#" target="_blank">
-                      About us
-                    </NavLink>
+                    <NavLink href="#about">About us</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink href="http://famzil.medium.com" target="_blank">
                       Blog
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="http://famzil.medium.com" target="_blank">
-                      Newletters
                     </NavLink>
                   </NavItem>
                 </Nav>

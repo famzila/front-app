@@ -4,10 +4,8 @@ import axios from 'axios';
 // reactstrap components
 import { Container, Row, Col } from 'reactstrap';
 
-// core components
-import DemoNavbar from '../components/DemoNavbar.js';
 import CardsFooter from '../components/Footers/CardsFooter.js';
-import Post from 'components/Post.js';
+import Post from 'components/Blog/Post.js';
 
 class ArticlesList extends React.Component {
   state = {
@@ -17,9 +15,13 @@ class ArticlesList extends React.Component {
   };
 
   getArticles() {
+    let base_url = '';
+    if (process.env.NODE_ENV !== 'production') {
+      base_url = process.env.REACT_APP_LOCAL;
+    }
     axios
       .get(
-        `http://localhost:5000/articles/${this.props.match.params.type}/${this.props.match.params.tag}`,
+        `${base_url}/articles/${this.props.match.params.type}/${this.props.match.params.tag}`,
       )
       .then((res) => {
         if (res.data.length > 0) {
@@ -40,7 +42,6 @@ class ArticlesList extends React.Component {
   render() {
     return (
       <>
-        <DemoNavbar />
         <main ref="main">
           <div className="position-relative">
             {/* shape Hero */}

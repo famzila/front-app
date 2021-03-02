@@ -10,9 +10,9 @@ class Community extends React.Component {
       <>
         <section className="section py-5 bg-secondary">
           <Container className="mb-5">
-            <h3 className="h4 text-center font-weight-bold mb-4">
+            <h1 className="special-title text-center  mb-4">
               Join Our Communities
-            </h3>
+            </h1>
             <div className="mb-3">
               <Container>
                 <Row>

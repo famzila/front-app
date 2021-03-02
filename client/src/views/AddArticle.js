@@ -18,11 +18,9 @@ import {
   Col,
 } from 'reactstrap';
 
-// core components
-import DemoNavbar from '../components/DemoNavbar.js';
 import CardsFooter from '../components/Footers/CardsFooter.js';
 
-class Article extends React.Component {
+class AddArticle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -60,8 +58,12 @@ class Article extends React.Component {
     this.setState({
       article: newArticle,
     });
+    let base_url = '';
+    if (process.env.NODE_ENV !== 'production') {
+      base_url = process.env.REACT_APP_LOCAL;
+    }
     axios
-      .post('http://localhost:5000/articles/add', newArticle)
+      .post(`${base_url}/articles/add`, newArticle)
       .then((res) => {
         console.log(`Article added ${res.data}`);
         this.setState({
@@ -79,7 +81,6 @@ class Article extends React.Component {
   render() {
     return (
       <>
-        <DemoNavbar />
         <main ref="main">
           <div className="position-relative">
             {/* shape Hero */}
@@ -136,7 +137,9 @@ class Article extends React.Component {
                   <Card className="bg-default shadow border-0">
                     <CardImg
                       alt="..."
-                      src={require('assets/img/theme/img-1-1200x1000.jpg').default}
+                      src={
+                        require('assets/img/theme/img-1-1200x1000.jpg').default
+                      }
                       top
                     />
                     <blockquote className="card-blockquote">
@@ -330,4 +333,4 @@ class Article extends React.Component {
   }
 }
 
-export default Article;
+export default AddArticle;

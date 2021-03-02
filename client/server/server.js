@@ -2,18 +2,14 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const bodyParser = require('body-parser');
-const mongoSanitize = require('express-mongo-sanitize');
+require('dotenv').config();
 const mongoose = require('mongoose');
 const articlesRouter = require('./routes/articles.js');
 const contactsRouter = require('./routes/contacts.js');
 
 // Express port
 const port = process.env.PORT || 5000;
-const DB_URI =
-  process.env.DB_URI ||
-  'mongodb+srv://front:front@cluster0.ibqh1.mongodb.net/frontDB?retryWrites=true&w=majority';
-
-// const URI = "mongodb://localhost:27017/frontDB";
+const DB_URI = process.env.REACT_APP_DB_URI || 'mongodb://localhost:27017/frontDB';
 mongoose.connect(DB_URI, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -39,6 +35,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client/public')));
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../../dist')));
+  app.get('/*', (req, res) => {
+    res.sendFile(path.resolve('index.js'));
+  });
+}
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header(

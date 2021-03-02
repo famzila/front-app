@@ -4,7 +4,7 @@ import React from 'react';
 // reactstrap components
 import { Button, Container, Row, Col } from 'reactstrap';
 
-class Banner extends React.Component {
+class BlogBanner extends React.Component {
   constructor(props) {
     super(props);
     this.newsletter = React.createRef();
@@ -22,7 +22,7 @@ class Banner extends React.Component {
         <div className="position-relative">
           <section className="section section-hero section-shaped">
             {/* Background circles */}
-            <div className="shape shape-style-1 shape-primary">
+            <div className="shape shape-style-1 shape-default">
               <span className="span-150" />
               <span className="span-50" />
               <span className="span-50" />
@@ -44,9 +44,9 @@ class Banner extends React.Component {
                       src={require('assets/img/brand/logo.png').default}
                       style={{ width: '200px' }}
                     />
-                    <p className="lead text-white">
+                    <h1 className="special-title text-white">
                       Welcome, ... discover, learn and enjoy!
-                    </p>
+                    </h1>
                     <div className="btn-wrapper mt-5">
                       <Button
                         className="btn-white btn-icon mb-3 mb-sm-0"
@@ -110,4 +110,4 @@ class Banner extends React.Component {
   }
 }
 
-export default Banner;
+export default BlogBanner;

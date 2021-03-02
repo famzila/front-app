@@ -40,8 +40,12 @@ class Contact extends React.Component {
       email: event.target.elements.email.value,
       message: event.target.elements.message.value,
     };
+    let base_url = '';
+    if (process.env.NODE_ENV !== 'production') {
+      base_url = process.env.REACT_APP_LOCAL;
+    }
     axios
-      .post('http://localhost:5000/contacts/send', newContact)
+      .post(`${base_url}/contacts/send`, newContact)
       .then((res) => {
         console.error(`Email sent successfully  ${res.data}`);
       })
@@ -52,13 +56,14 @@ class Contact extends React.Component {
   render() {
     return (
       <>
-        <section className="section section-lg bg-gradient-default mb-5">
+        <section
+          id="contact"
+          className="section section-lg bg-gradient-default mb-5"
+        >
           <Container className="pt-lg pb-300">
             <Row className="text-center justify-content-center">
               <Col lg="10">
-                <h2 className="display-3 text-white">
-                  Discover, learn, enjoy!
-                </h2>
+                <h1 className="special-title text-white">Contact us</h1>
               </Col>
             </Row>
           </Container>
@@ -71,7 +76,7 @@ class Contact extends React.Component {
                   <CardBody className="p-lg-5">
                     <h4 className="mb-1">Want to contact us?</h4>
                     <p className="mt-0">
-                      Your feedback is very important to us.
+                      Feel free to do so, you are welcomed.
                     </p>
                     <form onSubmit={this.handleSubmit}>
                       <FormGroup>

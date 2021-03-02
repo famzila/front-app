@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // reactstrap components
 import { Card, Container, Row, Col, CardImg } from 'reactstrap';
 
-class Bloc extends React.Component {
+class CardsBloc extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,9 +17,9 @@ class Bloc extends React.Component {
       <>
         <section className="section pb-0 section-components">
           <Container className="mb-5">
-            <h3 className="h4 text-center font-weight-bold mb-4">
+            <h1 className=" text-center special-title mb-4">
               {this.props.title}
-            </h3>
+            </h1>
             <div className="mb-3">
               <Container>
                 <Row className="justify-content-center">
@@ -30,7 +30,10 @@ class Bloc extends React.Component {
                           <Link to={`/articles/${this.state.type}/core`}>
                             <CardImg
                               alt="..."
-                              src={require(`assets/img/theme/${this.state.type}-core.png`).default}
+                              src={
+                                require(`assets/img/theme/${this.state.type}-core.png`)
+                                  .default
+                              }
                             />
                           </Link>
                         </Card>
@@ -40,7 +43,10 @@ class Bloc extends React.Component {
                           <Link to={`/articles/${this.state.type}/tips`}>
                             <CardImg
                               alt="..."
-                              src={require(`assets/img/theme/${this.state.type}-tips.png`).default}
+                              src={
+                                require(`assets/img/theme/${this.state.type}-tips.png`)
+                                  .default
+                              }
                             />
                           </Link>
                         </Card>
@@ -52,7 +58,10 @@ class Bloc extends React.Component {
                           >
                             <CardImg
                               alt="..."
-                              src={require(`assets/img/theme/${this.state.type}-optimization.png`).default}
+                              src={
+                                require(`assets/img/theme/${this.state.type}-optimization.png`)
+                                  .default
+                              }
                             />
                           </Link>
                         </Card>
@@ -69,4 +78,4 @@ class Bloc extends React.Component {
   }
 }
 
-export default Bloc;
+export default CardsBloc;

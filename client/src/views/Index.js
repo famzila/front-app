@@ -1,16 +1,12 @@
 import React from 'react';
 
 // core components
-import DemoNavbar from '../components/DemoNavbar.js';
-import CardsFooter from '../components/Footers/CardsFooter.js';
+import Technologies from '../components/Technologies.js';
+import Collaborations from '../components/Collaborations.js';
+import SimpleFooter from '../components/Footers/SimpleFooter.js';
 import Contact from '../components/Contact.js';
-
-// index page sections
-import Banner from '../components/Banner.js';
-import Bloc from '../components/Bloc.js';
-
-import Community from '../components/Community.js';
-import Mantra from '../components/Mantra.js';
+import About from 'components/About.js';
+import Banner from 'components/Banners/Banner.js';
 
 class Index extends React.Component {
   parentHandleClick = (type) => {
@@ -21,24 +17,14 @@ class Index extends React.Component {
   render() {
     return (
       <>
-        <DemoNavbar/>
         <main ref="main">
-          <Banner/>
-          <div
-            id="read"
-            ref={(ref) => {
-              this.targetRef = ref;
-            }}
-          ></div>
-          <Bloc type="angular" title="Angular ... choose your card" />
-          <Mantra />
-          <Bloc type="react" title="React ... choose your card" />
-          <Community />
-          <Bloc type="vuejs" title="Vue.js ... choose your card" />
+          <Banner />
+          <About />
+          <Collaborations />
+          <Technologies />
           <Contact />
-          <Bloc title="Profesionnal life Trends" />
         </main>
-        <CardsFooter />
+        <SimpleFooter />
       </>
     );
   }
