@@ -36,9 +36,9 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client/public')));
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../../dist')));
+  app.use(express.static(path.join(__dirname, '../../build')));
   app.get('/*', (req, res) => {
-    res.sendFile(path.resolve('index.js'));
+    res.sendFile(path.resolve('index.html'));
   });
 }
 app.use((req, res, next) => {
