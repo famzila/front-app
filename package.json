@@ -21,10 +21,12 @@
     "react-mailchimp-subscribe": "^2.1.0",
     "react-router-dom": "5.1.2",
     "react-scripts": "^4.0.1",
+    "react-typical": "^0.1.3",
     "reactstrap": "8.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "deploy": "npm run build && git commit -a -m deployment && git push heroku master",
     "server": "nodemon server/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -46,7 +48,6 @@
     ]
   },
   "devDependencies": {
-    "react-typical": "^0.1.3",
     "typescript": "3.7.5"
   }
 }
