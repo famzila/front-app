@@ -9,7 +9,8 @@ const contactsRouter = require('./routes/contacts.js');
 
 // Express port
 const port = process.env.PORT || 5000;
-const DB_URI = process.env.REACT_APP_DB_URI || 'mongodb://localhost:27017/frontDB';
+const DB_URI =
+  process.env.REACT_APP_DB_URI || 'mongodb://localhost:27017/frontDB';
 mongoose.connect(DB_URI, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -33,12 +34,12 @@ app.use(cors());
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'client/public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../../build')));
   app.get('/*', (req, res) => {
-    res.sendFile(path.resolve('index.html'));
+    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
   });
 }
 app.use((req, res, next) => {

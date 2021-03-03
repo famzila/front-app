@@ -19,7 +19,6 @@ class ArticlesList extends React.Component {
     if (process.env.NODE_ENV !== 'production') {
       base_url = process.env.REACT_APP_LOCAL;
     }
-    console.log(process.env.NODE_ENV);
     axios
       .get(
         `${base_url}/articles/${this.props.match.params.type}/${this.props.match.params.tag}`,
