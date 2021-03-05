@@ -34,10 +34,11 @@ app.use(cors());
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
 app.use('/articles', articlesRouter);
 app.use('/contacts', contactsRouter);
-
+if (process.env.NODE_ENV === 'development') {
+  app.use(express.static(path.join(__dirname, 'public')));
+}
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../build')));
   app.get('/*', (req, res) => {
