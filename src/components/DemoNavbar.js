@@ -309,6 +309,22 @@ class DemoNavbar extends React.Component {
                       Follow us on Linkedin
                     </UncontrolledTooltip>
                   </NavItem>
+                  <NavItem>
+                    <NavLink
+                      className="nav-link-icon"
+                      href="https://famzil.medium.com"
+                      id="tooltip184698799"
+                      target="_blank"
+                    >
+                      <i className="fa fa-medium " />
+                      <span className="nav-link-inner--text d-lg-none ml-2">
+                        Medium
+                      </span>
+                    </NavLink>
+                    <UncontrolledTooltip delay={0} target="tooltip184698799">
+                      Follow us on Medium
+                    </UncontrolledTooltip>
+                  </NavItem>
                 </Nav>
               </UncontrolledCollapse>
             </Container>

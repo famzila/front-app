@@ -51,8 +51,7 @@ class BlogBanner extends React.Component {
                       <Button
                         className="btn-white btn-icon mb-3 mb-sm-0"
                         color="default"
-                        href="#read"
-                        onClick={this.scrollToTarget}
+                        onClick={this.props.onClick}
                         size="lg"
                       >
                         <span className="btn-inner--icon mr-1">

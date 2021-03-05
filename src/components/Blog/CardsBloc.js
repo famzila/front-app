@@ -17,7 +17,7 @@ class CardsBloc extends React.Component {
       <>
         <section className="section pb-0 section-components">
           <Container className="mb-5">
-            <h1 className=" text-center special-title mb-4">
+            <h1 className=" text-center special-title mb-4 text-warning">
               {this.props.title}
             </h1>
             <div className="mb-3">

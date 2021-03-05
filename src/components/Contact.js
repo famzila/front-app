@@ -32,6 +32,11 @@ class Contact extends React.Component {
     });
   }
 
+  goToContact = () => {
+    const anchor = document.querySelector('#contact');
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
   handleSubmit(event) {
     event.preventDefault();
 

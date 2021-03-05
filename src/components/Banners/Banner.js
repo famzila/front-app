@@ -12,6 +12,7 @@ class Banner extends React.Component {
       selectedtype: 'All',
     };
   }
+
   handleClick = (type) => {
     this.setState({ selectedtype: type });
     this.newsletter.current.toggleModal('formModal', type);
@@ -75,7 +76,7 @@ class Banner extends React.Component {
                         className="btn-icon mb-3 mb-sm-0"
                         color="github"
                         size="lg"
-                        href="#contact"
+                        onClick={this.props.onClick}
                       >
                         <span className="btn-inner--icon mr-1">
                           <i className="ni ni-send" />
@@ -146,7 +147,7 @@ class Banner extends React.Component {
                           <Button
                             className="mt-4"
                             color="primary"
-                            href="#contact"
+                            onClick={this.props.onClick}
                           >
                             Learn more
                           </Button>
@@ -177,7 +178,7 @@ class Banner extends React.Component {
                               Small-devices
                             </Badge>
                           </div>
-                          <Button className="mt-4" color="info" href="#contact">
+                          <Button className="mt-4" color="info" onClick={this.props.onClick}>
                             Learn more
                           </Button>
                         </CardBody>
@@ -210,7 +211,7 @@ class Banner extends React.Component {
                           <Button
                             className="mt-4"
                             color="danger"
-                            href="#contact"
+                            onClick={this.props.onClick}
                           >
                             Learn more
                           </Button>

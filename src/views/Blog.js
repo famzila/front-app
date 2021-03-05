@@ -16,19 +16,19 @@ class Blog extends React.Component {
     this.setState({ selectedtype: type });
     this.newsletter.current.toggleModal('formModal', type);
   };
+  handleReadClick = () => {
+    const anchor = document.querySelector('#read');
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
 
   render() {
     return (
       <>
         <main ref="main">
-          <BlogBanner />
-          <div
-            id="read"
-            ref={(ref) => {
-              this.targetRef = ref;
-            }}
-          ></div>
-          <CardsBloc type="angular" title="Angular ... choose your card" />
+          <BlogBanner onClick={this.handleReadClick} />
+          <div id="read">
+            <CardsBloc type="angular" title="Angular ... choose your card" />
+          </div>
           <Mantra />
           <CardsBloc type="react" title="React ... choose your card" />
           <Community />
