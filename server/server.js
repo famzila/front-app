@@ -37,20 +37,9 @@ app.use(bodyParser.json());
 app.use('/articles', articlesRouter);
 app.use('/contacts', contactsRouter);
 
-app.use(express.static(path.join(__dirname, 'public')));
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../build')));
-  app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  });
-}
-
-// Setting up a route for our API
-app.get('/api', (req, res) => {
-  return res.status(200).json({
-    status: 'success',
-  });
+app.use(express.static(path.join(__dirname, '../build')));
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.listen(port, () => {
