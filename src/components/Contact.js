@@ -45,7 +45,7 @@ class Contact extends React.Component {
       email: event.target.elements.email.value,
       message: event.target.elements.message.value,
     };
-    let base_url = '';
+    let base_url = '/';
     if (process.env.NODE_ENV !== 'production') {
       base_url = process.env.REACT_APP_LOCAL;
     }
