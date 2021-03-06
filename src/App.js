@@ -30,7 +30,7 @@ function App() {
             render={(props) => <Notfound {...props} />}
           />
           <Route
-            path="/articles/:type/:tag"
+            path="/blog/articles/:type/:tag"
             exact
             render={(props) => <ArticlesList {...props} />}
           />

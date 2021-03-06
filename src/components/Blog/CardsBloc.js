@@ -27,7 +27,7 @@ class CardsBloc extends React.Component {
                     <Row>
                       <Col className="mb-5 mb-md-0" lg="4">
                         <Card className="card-lift--hover shadow border-0">
-                          <Link to={`/articles/${this.state.type}/core`}>
+                          <Link to={`/blog/articles/${this.state.type}/core`}>
                             <CardImg
                               alt="..."
                               src={
