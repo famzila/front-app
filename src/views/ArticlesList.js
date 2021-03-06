@@ -15,7 +15,7 @@ class ArticlesList extends React.Component {
   };
 
   getArticles() {
-    let base_url = '/';
+    let base_url = window.location.origin;;
     if (process.env.NODE_ENV !== 'production') {
       base_url = process.env.REACT_APP_LOCAL;
     }
