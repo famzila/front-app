@@ -33,36 +33,44 @@ class Collaborations extends React.Component {
             </Row>
             <Row>
               <Col sm="3" xs="6">
-                <img
-                  alt="..."
-                  className="img-fluid rounded-circle shadow"
-                  src={require('assets/img/theme/logo-ineris.png').default}
-                  style={{ width: '150px' }}
-                />
+                <a href="https://www.ineris.fr/en" target="_blank" rel="noreferrer">
+                  <img
+                    alt="..."
+                    className="img-fluid rounded-circle shadow"
+                    src={require('assets/img/theme/logo-ineris.png').default}
+                    style={{ width: '150px' }}
+                  />
+                </a>
               </Col>
               <Col sm="3" xs="6">
-                <img
-                  alt="..."
-                  className="img-fluid rounded-circle shadow"
-                  src={require('assets/img/theme/logo-peps.png').default}
-                  style={{ width: '150px' }}
-                />
+                <a href="https://peps.paris.fr/peps/" target="_blank" rel="noreferrer">
+                  <img
+                    alt="..."
+                    className="img-fluid rounded-circle shadow"
+                    src={require('assets/img/theme/logo-peps.png').default}
+                    style={{ width: '150px' }}
+                  />
+                </a>
               </Col>
               <Col sm="3" xs="6">
-                <img
-                  alt="..."
-                  className="img-fluid rounded-circle shadow"
-                  src={require('assets/img/theme/logo-sncf.png').default}
-                  style={{ width: '150px' }}
-                />
+                <a href="https://www.sncf-reseau.com/en" target="_blank" rel="noreferrer">
+                  <img
+                    alt="..."
+                    className="img-fluid rounded-circle shadow"
+                    src={require('assets/img/theme/logo-sncf.png').default}
+                    style={{ width: '150px' }}
+                  />
+                </a>
               </Col>
               <Col sm="3" xs="6">
-                <img
-                  alt="..."
-                  className="img-fluid rounded-circle shadow"
-                  src={require('assets/img/theme/logo-lacipav.png').default}
-                  style={{ width: '150px' }}
-                />
+                <a href="https://www.lacipav.fr/" target="_blank" rel="noreferrer">
+                  <img
+                    alt="..."
+                    className="img-fluid rounded-circle shadow"
+                    src={require('assets/img/theme/logo-lacipav.png').default}
+                    style={{ width: '150px' }}
+                  />
+                </a>
               </Col>
             </Row>
           </Container>

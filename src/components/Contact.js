@@ -13,12 +13,13 @@ import {
   Container,
   Row,
   Col,
+  UncontrolledAlert,
 } from 'reactstrap';
 
 class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: '', email: '', message: '' };
+    this.state = { name: '', email: '', message: '', sentSuccess: false };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -37,7 +38,7 @@ class Contact extends React.Component {
     anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
 
     const newContact = {
@@ -52,19 +53,18 @@ class Contact extends React.Component {
     axios
       .post(`${base_url}/contacts/send`, newContact)
       .then((res) => {
-        console.error(`Email sent successfully  ${res.data}`);
+        console.info(`${res}`);
+        this.setState({ sentSuccess: true });
       })
       .catch((error) => {
         console.error(`Error while fetching articles: ${error}`);
+        this.setState({ sentSuccess: false });
       });
-  }
+  };
   render() {
     return (
       <>
-        <section
-          id="contact"
-          className="section section-lg bg-gradient-default mb-5"
-        >
+        <section className="section section-lg bg-gradient-default mb-5">
           <Container className="pt-lg pb-300">
             <Row className="text-center justify-content-center">
               <Col lg="10">
@@ -73,7 +73,10 @@ class Contact extends React.Component {
             </Row>
           </Container>
         </section>
-        <section className="section section-lg pt-lg-0 section-contact-us">
+        <section
+          id="contact"
+          className="section section-lg pt-lg-0 section-contact-us"
+        >
           <Container>
             <Row className="justify-content-center mt--300">
               <Col lg="8">
@@ -83,6 +86,19 @@ class Contact extends React.Component {
                     <p className="mt-0">
                       Feel free to do so, you are welcomed.
                     </p>
+                    {this.state.sentSuccess ? (
+                      <UncontrolledAlert color="success" fade={true}>
+                        <span className="alert-inner--icon">
+                          <i className="ni ni-like-2" />
+                        </span>
+                        <span className="alert-inner--text ml-1">
+                          <strong> Thank you!</strong> for your message, you'll
+                          soon receive our response.
+                        </span>
+                      </UncontrolledAlert>
+                    ) : (
+                      ''
+                    )}
                     <form onSubmit={this.handleSubmit}>
                       <FormGroup>
                         <InputGroup className="input-group-alternative">

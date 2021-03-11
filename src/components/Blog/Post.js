@@ -12,7 +12,7 @@ class Post extends React.Component {
           {this.props.posts.map((post, index) => (
             <Row className="row-grid align-items-center">
               <Col md="6">
-                <Card className="bg-default shadow border-0">
+                <Card className="bg-warning shadow border-0">
                   <Link to={{ pathname: `/${post.body}` }} target="_blank">
                     <CardImg alt={post.title} src={post.cover} />
                   </Link>
@@ -24,17 +24,17 @@ class Post extends React.Component {
                       viewBox="0 0 583 95"
                     >
                       <polygon
-                        className="fill-default"
+                        className="fill-warning"
                         points="0,52 583,95 0,95"
                       />
                       <polygon
-                        className="fill-default"
+                        className="fill-warning"
                         opacity=".2"
                         points="0,42 583,95 683,0 0,95"
                       />
                     </svg>
-                    <h4 className="display-3 font-weight-bold text-white">
-                      Angular
+                    <h4 className="display-3 font-weight-bold text-white text-capitalize">
+                    {post.type}
                     </h4>
                   </blockquote>
                 </Card>

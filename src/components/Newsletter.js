@@ -48,10 +48,10 @@ class Newsletter extends React.Component {
   handleSubscribe = (event) => {
     event.preventDefault();
     const temail = event.target.elements.email.value;
-    const ttype = event.target.elements.type.value;
+    const type = event.target.elements.type.value;
     this.setState({
       email: temail,
-      type: ttype,
+      type: type,
     });
     axios({
       url:
@@ -62,7 +62,7 @@ class Newsletter extends React.Component {
       dataType: 'json',
     }).then(() => {
       console.log('success');
-    });
+    }).catch(error => console.log("Error occurred while subscribing to the Newsletter: ", error));
   };
   render() {
     return (

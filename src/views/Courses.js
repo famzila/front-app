@@ -1,63 +1,17 @@
 import React from 'react';
-import axios from 'axios';
 
 // reactstrap components
 import { Container, Row, Col } from 'reactstrap';
+import CardsFooter from '../components/Footers/CardsFooter';
 
-import CardsFooter from '../components/Footers/CardsFooter.js';
-import Post from 'components/Blog/Post.js';
-
-class ArticlesList extends React.Component {
-  state = {
-    type: this.props.match.params.type,
-    tag: this.props.match.params.tag,
-    articles: [],
-  };
-
-  shuffle = (array) => {
-    let i = array.length - 1;
-    for (i; i > 0; i--) {
-      const j = Math.floor(Math.random() * i);
-      const temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
-    }
-  };
-
-  getArticles() {
-    let base_url = window.location.origin;
-    if (process.env.NODE_ENV !== 'production') {
-      base_url = process.env.REACT_APP_LOCAL;
-    }
-    axios
-      .get(
-        `${base_url}/articles/${this.props.match.params.type}/${this.props.match.params.tag}`,
-      )
-      .then((res) => {
-        if (res.data.length > 0) {
-          this.shuffle(res.data);
-          console.log('Articles: ', res.data);
-          this.setState({ articles: res.data });
-        }
-      })
-      .catch((error) => {
-        console.error(`Error while fetching articles: ${error}`);
-      });
-  }
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-    this.getArticles();
-  }
+class Courses extends React.Component {
   render() {
     return (
       <>
         <main ref="main">
           <div className="position-relative">
-            {/* shape Hero */}
             <section className="section section-lg section-shaped pb-25">
-              <div className="shape shape-style-1 shape-default">
+              <div className="shape shape-style-1 shape-primary">
                 <span />
                 <span />
                 <span />
@@ -74,7 +28,7 @@ class ArticlesList extends React.Component {
                     <Col lg="12">
                       <h1 className="display-3 text-white">
                         Read, discover, learn and find a better you!
-                        <span>Articles from talented people</span>
+                        <span>Courses from talented people</span>
                       </h1>
                       <p className="lead text-white">
                         In technology's world everything is in a race, things
@@ -104,7 +58,10 @@ class ArticlesList extends React.Component {
           </div>
           <section className="section">
             <Container>
-              <Post posts={this.state.articles} />
+              <h1 className="special-title text-danger text-center">
+                {' '}
+                Courses
+              </h1>
             </Container>
           </section>
         </main>
@@ -114,4 +71,4 @@ class ArticlesList extends React.Component {
   }
 }
 
-export default ArticlesList;
+export default Courses;

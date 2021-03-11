@@ -13,27 +13,31 @@ class CardsFooter extends React.Component {
             <Row>
               <Col className="mb-5 mb-md-0" md="6">
                 <Card className="card-lift--hover shadow border-0">
-                  <Link to="/landing-page">
+                  <Link to="/courses/angular">
                     <CardImg
                       alt="..."
-                      src={require('assets/img/theme/landing.jpg').default}
+                      src={
+                        require('assets/img/theme/angular-courses.jpg').default
+                      }
                     />
                   </Link>
                 </Card>
               </Col>
               <Col className="mb-5 mb-lg-0" md="6">
                 <Card className="card-lift--hover shadow border-0">
-                  <Link to="/profile-page">
+                  <Link to="/courses/basics">
                     <CardImg
                       alt="..."
-                      src={require('assets/img/theme/profile.jpg').default}
+                      src={
+                        require('assets/img/theme/basics-courses.jpg').default
+                      }
                     />
                   </Link>
                 </Card>
               </Col>
             </Row>
           </Container>
-          <SocialMedia onClick={this.props.onClick} />
+          <SocialMedia about="0" onClick={this.props.onClick} />
         </footer>
       </>
     );

@@ -9,7 +9,6 @@ import {
   DropdownItem,
   DropdownToggle,
   UncontrolledDropdown,
-  Media,
   NavbarBrand,
   Navbar,
   NavItem,
@@ -101,14 +100,14 @@ class DemoNavbar extends React.Component {
                   </Row>
                 </div>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
-                  <UncontrolledDropdown nav>
+                  {/* <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
                       <span className="nav-link-inner--text">Courses</span>
                     </DropdownToggle>
                     <DropdownMenu className="dropdown-menu-xl">
                       <div className="dropdown-menu-inner">
-                        <Media className="d-flex align-items-center" href="">
+                        <Media className="d-flex align-items-center" href="/courses/basics">
                           <div className="icon icon-shape bg-gradient-primary rounded-circle text-white">
                             <i className="ni ni-spaceship" />
                           </div>
@@ -124,7 +123,7 @@ class DemoNavbar extends React.Component {
                         </Media>
                         <Media
                           className="d-flex align-items-center"
-                          href="/articles/angular/core"
+                          href="/courses/angular"
                         >
                           <div className="icon icon-shape bg-gradient-danger rounded-circle text-white">
                             <img
@@ -147,7 +146,7 @@ class DemoNavbar extends React.Component {
                         </Media>
                         <Media
                           className="d-flex align-items-center"
-                          href="/articles/react/core"
+                          href="/courses/react"
                         >
                           <div className="icon icon-shape bg-gradient-info rounded-circle text-white">
                             <img
@@ -170,7 +169,7 @@ class DemoNavbar extends React.Component {
                         </Media>
                         <Media
                           className="d-flex align-items-center"
-                          href="/articles/vuejs/core"
+                          href="/courses/vuejs"
                         >
                           <div className="icon icon-shape bg-gradient-success rounded-circle text-white">
                             <img
@@ -193,7 +192,7 @@ class DemoNavbar extends React.Component {
                         </Media>
                       </div>
                     </DropdownMenu>
-                  </UncontrolledDropdown>
+                  </UncontrolledDropdown> */}
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-collection d-lg-none mr-1" />

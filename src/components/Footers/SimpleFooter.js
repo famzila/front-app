@@ -5,7 +5,7 @@ class SimpleFooter extends React.Component {
     return (
       <>
         <footer className=" footer">
-          <SocialMedia onClick={this.props.onClick} />
+          <SocialMedia about="1" onClick={this.props.onClick} />
         </footer>
       </>
     );

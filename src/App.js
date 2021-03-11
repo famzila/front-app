@@ -11,6 +11,7 @@ import ArticlesList from './views/ArticlesList.js';
 import AddArticle from './views/AddArticle.js';
 import Notfound from 'views/Notfound.js';
 import Blog from 'views/Blog.js';
+import Courses from 'views/Courses.js';
 
 function App() {
   return (
@@ -35,6 +36,11 @@ function App() {
             render={(props) => <ArticlesList {...props} />}
           />
           <Route path="/blog" exact render={(props) => <Blog {...props} />} />
+          <Route
+            path="/courses/:type"
+            exact
+            render={(props) => <Courses {...props} />}
+          />
           <Redirect to="/not-found" />
         </Switch>
       </BrowserRouter>

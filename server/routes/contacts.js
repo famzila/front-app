@@ -1,4 +1,4 @@
-const router = require('express').Router();
+let router = require('express').Router();
 let Contact = require('../models/contact.model');
 const nodemailer = require('nodemailer');
 
@@ -7,42 +7,44 @@ router.route('/send').post((req, res) => {
   const userMail = req.body.email;
   const message = req.body.message;
 
-  const newContact = new Contact({ userName, userMail, message });
-  newContact
-    .save()
-    .then(() => {
-      res.json('Contact added!');
-      const transport = nodemailer.createTransport({
-        host: 'smtp.mailtrap.io',
-        port: 2525,
-        auth: {
-          user: '798b7d75151926',
-          pass: '6943f1e7181ee9',
-        },
-      });
-
-      const mailOptions = {
-        from: userMail,
-        to: 'famzil.contact@gmail.com',
-        subject: 'Contact',
-        text: message,
-        html: `<b>Hey there! </b><br> ${message} />`,
-        attachments: [
-          {
-            filename: 'logo.png',
-            path: 'assets/img/brand/logo.png',
-          },
-        ],
-      };
-
-      transport.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          return console.log(error);
-        }
-        console.log('Message sent: %s', info.messageId);
-      });
+  const newContact = new Contact({
+    name: userName,
+    email: userMail,
+    message: message,
+  });
+  Contact.find({ email: userMail })
+    .limit(1)
+    .then((result) => {
+      if (result.length === 0) {
+        newContact.save().then(() => {
+          console.log('Contact is added!');
+        });
+      }
     })
     .catch((err) => res.status(400).json('Error: ' + err));
-});
 
+  //Send email
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'famzil.contact@gmail.com',
+      pass: 'amzilamzil123',
+    },
+  });
+
+  let mailOptions = {
+    from: userMail,
+    to: 'famzil.contact@gmail.com',
+    subject: `[FRONT]-Contact from ${userName}`,
+    html: `${message} <br/> from ${userMail}`,
+  };
+
+  transporter.sendMail(mailOptions, function (err, info) {
+    if (err) {
+      res.json(err);
+    } else {
+      res.json(info);
+    }
+  });
+});
 module.exports = router;
