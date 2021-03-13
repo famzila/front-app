@@ -1,13 +1,16 @@
 import React from 'react';
 
 // reactstrap components
+import DemoNavbar from '../components/DemoNavbar.js';
 import { Container, Row, Col } from 'reactstrap';
 import CardsFooter from '../components/Footers/CardsFooter';
+import Contact from '../components/Contact';
 
 class Courses extends React.Component {
   render() {
     return (
       <>
+        <DemoNavbar about="0" />
         <main ref="main">
           <div className="position-relative">
             <section className="section section-lg section-shaped pb-25">
@@ -56,14 +59,13 @@ class Courses extends React.Component {
               </div>
             </section>
           </div>
-          <section className="section">
+          <section className="section text-center">
             <Container>
-              <h1 className="special-title text-danger text-center">
-                {' '}
-                Courses
-              </h1>
+              <h1 className="special-title text-danger"> COMING SOON</h1>
+              <h3>Courses from talented developer and engineers</h3>
             </Container>
           </section>
+          <Contact ref={this.contact} />
         </main>
         <CardsFooter />
       </>

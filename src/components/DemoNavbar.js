@@ -5,10 +5,6 @@ import Headroom from 'headroom.js';
 // reactstrap components
 import {
   UncontrolledCollapse,
-  DropdownMenu,
-  DropdownItem,
-  DropdownToggle,
-  UncontrolledDropdown,
   NavbarBrand,
   Navbar,
   NavItem,
@@ -193,7 +189,7 @@ class DemoNavbar extends React.Component {
                       </div>
                     </DropdownMenu>
                   </UncontrolledDropdown> */}
-                  <UncontrolledDropdown nav>
+                  {/* <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-collection d-lg-none mr-1" />
                       <span className="nav-link-inner--text">Newsletter</span>
@@ -228,7 +224,16 @@ class DemoNavbar extends React.Component {
                         All
                       </DropdownItem>
                     </DropdownMenu>
-                  </UncontrolledDropdown>
+                  </UncontrolledDropdown> */}
+                  {this.props.about === '1' ? (
+                    <NavItem>
+                      <NavLink href="#" onClick={this.props.onClick}>
+                        About us
+                      </NavLink>
+                    </NavItem>
+                  ) : (
+                    ''
+                  )}
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"

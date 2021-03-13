@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 // nodejs library that concatenates classes
 import classnames from 'classnames';
 // reactstrap components
@@ -53,16 +52,16 @@ class Newsletter extends React.Component {
       email: temail,
       type: type,
     });
-    axios({
-      url:
-        'https://front.us7.list-manage.com/subscribe/post?u=26c793b23bcb0bd2b8656a55e&amp;id=955389e919',
-      headers: { 'Access-Control-Allow-Origin': '*' },
-      method: 'post',
-      data: this.state,
-      dataType: 'json',
-    }).then(() => {
-      console.log('success');
-    }).catch(error => console.log("Error occurred while subscribing to the Newsletter: ", error));
+    // axios({
+    //   url:
+    //     'https://front.us7.list-manage.com/subscribe/post?u=26c793b23bcb0bd2b8656a55e&amp;id=955389e919',
+    //   headers: { 'Access-Control-Allow-Origin': '*' },
+    //   method: 'post',
+    //   data: this.state,
+    //   dataType: 'json',
+    // }).then(() => {
+    //   console.log('success');
+    // }).catch(error => console.log("Error occurred while subscribing to the Newsletter: ", error));
   };
   render() {
     return (

@@ -37,7 +37,7 @@ class CardsFooter extends React.Component {
               </Col>
             </Row>
           </Container>
-          <SocialMedia about="0" onClick={this.props.onClick} />
+          <SocialMedia about="0" onClick={this.props.onClick} onClickContact={this.props.onClickContact} />
         </footer>
       </>
     );

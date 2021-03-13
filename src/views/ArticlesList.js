@@ -3,15 +3,23 @@ import axios from 'axios';
 
 // reactstrap components
 import { Container, Row, Col } from 'reactstrap';
-
+import DemoNavbar from '../components/DemoNavbar.js';
 import CardsFooter from '../components/Footers/CardsFooter.js';
+import Contact from '../components/Contact';
 import Post from 'components/Blog/Post.js';
 
 class ArticlesList extends React.Component {
-  state = {
-    type: this.props.match.params.type,
-    tag: this.props.match.params.tag,
-    articles: [],
+  constructor(props) {
+    super(props);
+    this.contact = React.createRef();
+    this.state = {
+      type: this.props.match.params.type,
+      tag: this.props.match.params.tag,
+      articles: [],
+    };
+  }
+  handleContactClick = () => {
+    this.contact.current.goToContact();
   };
 
   shuffle = (array) => {
@@ -25,14 +33,18 @@ class ArticlesList extends React.Component {
   };
 
   getArticles() {
+    let url = '';
     let base_url = window.location.origin;
     if (process.env.NODE_ENV !== 'production') {
       base_url = process.env.REACT_APP_LOCAL;
     }
+    if (this.props.match.params.type === 'professional') {
+      url = `${base_url}/articles/${this.props.match.params.type}`;
+    } else {
+      url = `${base_url}/articles/${this.props.match.params.type}/${this.props.match.params.tag}`;
+    }
     axios
-      .get(
-        `${base_url}/articles/${this.props.match.params.type}/${this.props.match.params.tag}`,
-      )
+      .get(url)
       .then((res) => {
         if (res.data.length > 0) {
           this.shuffle(res.data);
@@ -53,6 +65,7 @@ class ArticlesList extends React.Component {
   render() {
     return (
       <>
+        <DemoNavbar about="0" />
         <main ref="main">
           <div className="position-relative">
             {/* shape Hero */}
@@ -107,8 +120,9 @@ class ArticlesList extends React.Component {
               <Post posts={this.state.articles} />
             </Container>
           </section>
+          <Contact ref={this.contact} />
         </main>
-        <CardsFooter />
+        <CardsFooter onClickContact={this.handleContactClick} />
       </>
     );
   }

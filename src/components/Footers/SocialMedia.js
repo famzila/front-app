@@ -118,6 +118,9 @@ class SocialMedia extends React.Component {
                 <NavItem>
                   <NavLink href="/Blog">Blog</NavLink>
                 </NavItem>
+                <NavItem>
+                  <NavLink href="#" onClick={this.props.onClickContact}>Contact us</NavLink>
+                </NavItem>
               </Nav>
             </Col>
           </Row>
