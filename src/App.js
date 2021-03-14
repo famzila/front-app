@@ -19,7 +19,7 @@ function App() {
         <Switch>
           <Route path="/" exact render={(props) => <Index {...props} />} />
           <Route
-            path="/api/add-article"
+            path="/blog/api/add-article"
             exact
             render={(props) => <AddArticle {...props} />}
           />

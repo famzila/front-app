@@ -33,7 +33,10 @@ class Blog extends React.Component {
       <>
         <DemoNavbar about="0" />
         <main ref="main">
-          <BlogBanner onClick={this.handleReadClick} />
+          <BlogBanner
+            onClick={this.handleReadClick}
+            handleContact={this.handleContactClick}
+          />
           <div id="read">
             <CardsBloc type="angular" title="Angular ... choose your card" />
           </div>

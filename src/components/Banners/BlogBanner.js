@@ -63,13 +63,13 @@ class BlogBanner extends React.Component {
                         className="btn-icon mb-3 mb-sm-0"
                         color="github"
                         size="lg"
-                        onClick={() => this.handleClick('all')}
+                        onClick={this.props.handleContact}
                       >
                         <span className="btn-inner--icon mr-1">
                           <i className="ni ni-send" />
                         </span>
                         <span className="btn-inner--text">
-                          <span className="text-warning mr-1">Subscribe</span>
+                          <span className="text-warning mr-1">Contact us</span>
                         </span>
                       </Button>
                     </div>
