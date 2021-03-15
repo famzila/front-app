@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import 'assets/vendor/nucleo/css/nucleo.css';
@@ -12,44 +12,42 @@ import Notfound from 'views/Notfound.js';
 import Blog from 'views/Blog.js';
 import Courses from 'views/Courses.js';
 
-class App extends React.Component {
-  componentDidMount() {
-    ReactGA.initialize('UA-000000-01');
+function App() {
+  useEffect(() => {
+    ReactGA.initialize('G-FS62VH3X0Q');
     ReactGA.pageview(window.location.pathname + window.location.search);
-  }
-  render() {
-    return (
-      <>
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" exact render={(props) => <Index {...props} />} />
-            <Route
-              path="/blog/api/add-article"
-              exact
-              render={(props) => <AddArticle {...props} />}
-            />
-            <Route
-              path="/not-found"
-              exact
-              render={(props) => <Notfound {...props} />}
-            />
-            <Route
-              path="/blog/articles/:type/:tag"
-              exact
-              render={(props) => <ArticlesList {...props} />}
-            />
-            <Route path="/blog" exact render={(props) => <Blog {...props} />} />
-            <Route
-              path="/courses/:type"
-              exact
-              render={(props) => <Courses {...props} />}
-            />
-            <Redirect to="/not-found" />
-          </Switch>
-        </BrowserRouter>
-      </>
-    );
-  }
+  });
+  return (
+    <>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact render={(props) => <Index {...props} />} />
+          <Route
+            path="/blog/api/add-article"
+            exact
+            render={(props) => <AddArticle {...props} />}
+          />
+          <Route
+            path="/not-found"
+            exact
+            render={(props) => <Notfound {...props} />}
+          />
+          <Route
+            path="/blog/articles/:type/:tag"
+            exact
+            render={(props) => <ArticlesList {...props} />}
+          />
+          <Route path="/blog" exact render={(props) => <Blog {...props} />} />
+          <Route
+            path="/courses/:type"
+            exact
+            render={(props) => <Courses {...props} />}
+          />
+          <Redirect to="/not-found" />
+        </Switch>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;

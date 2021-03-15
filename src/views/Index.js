@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGa from 'react-ga';
 // core components
 import Technologies from '../components/Technologies.js';
 import DemoNavbar from 'components/DemoNavbar.js';
