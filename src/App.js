@@ -11,10 +11,10 @@ import AddArticle from './views/AddArticle.js';
 import Notfound from 'views/Notfound.js';
 import Blog from 'views/Blog.js';
 import Courses from 'views/Courses.js';
+ReactGA.initialize('G-GFRSV41LHS');
 
 function App() {
   useEffect(() => {
-    ReactGA.initialize('G-FS62VH3X0Q');
     ReactGA.pageview(window.location.pathname + window.location.search);
   });
   return (

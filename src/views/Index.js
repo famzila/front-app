@@ -8,9 +8,15 @@ import SimpleFooter from '../components/Footers/SimpleFooter.js';
 import Contact from '../components/Contact.js';
 import About from 'components/About.js';
 import Banner from 'components/Banners/Banner.js';
+import ReactGA from 'react-ga';
 
+ReactGA.initialize('G-GFRSV41LHS');
 
 class Index extends React.Component {
+  componentDidMount = () =>
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  componentDidUpdate = () =>
+    ReactGA.pageview(window.location.pathname + window.location.search);
   constructor(props) {
     super(props);
     this.contact = React.createRef();
