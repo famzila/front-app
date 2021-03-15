@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReactGa from 'react-ga';
 // core components
 import Technologies from '../components/Technologies.js';
 import DemoNavbar from 'components/DemoNavbar.js';
@@ -8,6 +8,8 @@ import SimpleFooter from '../components/Footers/SimpleFooter.js';
 import Contact from '../components/Contact.js';
 import About from 'components/About.js';
 import Banner from 'components/Banners/Banner.js';
+ReactGA.initialize('G-FS62VH3X0Q');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class Index extends React.Component {
   constructor(props) {
