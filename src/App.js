@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
+import ReactGa from 'react-ga';
 import 'assets/vendor/nucleo/css/nucleo.css';
 import 'assets/vendor/font-awesome/css/font-awesome.min.css';
 import 'assets/scss/argon-design-system-react.scss?v1.1.0';
@@ -11,6 +12,8 @@ import AddArticle from './views/AddArticle.js';
 import Notfound from 'views/Notfound.js';
 import Blog from 'views/Blog.js';
 import Courses from 'views/Courses.js';
+ReactGA.initialize('G-FS62VH3X0Q');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
   return (
