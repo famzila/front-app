@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import 'assets/vendor/nucleo/css/nucleo.css';
@@ -11,7 +11,7 @@ import AddArticle from './views/AddArticle.js';
 import Notfound from 'views/Notfound.js';
 import Blog from 'views/Blog.js';
 import Courses from 'views/Courses.js';
-ReactGA.initialize('G-GFRSV41LHS');
+ReactGA.initialize(process.env.REACT_APP_GA_ID);
 
 function App() {
   useEffect(() => {
