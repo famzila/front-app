@@ -126,9 +126,9 @@ class Banner extends React.Component {
                           <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
                             <i className="ni ni-spaceship" />
                           </div>
-                          <h6 className="text-primary text-uppercase">
+                          <p className="text-primary text-uppercase">
                             FAST WEBSITES
-                          </h6>
+                          </p>
                           <p className="description mt-3">
                             Reactive and fast websites. We build fast website
                             thanks to quick loading time and optimized code.
@@ -160,9 +160,9 @@ class Banner extends React.Component {
                           <div className="icon icon-shape icon-shape-info rounded-circle mb-4">
                             <i className="ni ni-mobile-button" />
                           </div>
-                          <h6 className="text-info text-uppercase">
+                          <p className="text-info text-uppercase">
                             Responsive design
-                          </h6>
+                          </p>
                           <p className="description mt-3">
                             Responsive design on small and large screens. Our
                             websites work efficiently on all devices.
@@ -190,9 +190,9 @@ class Banner extends React.Component {
                           <div className="icon icon-shape icon-shape-danger rounded-circle mb-4">
                             <i className="ni ni-satisfied" />
                           </div>
-                          <h6 className="text-danger text-uppercase">
+                          <p className="text-danger text-uppercase">
                             User experience focused
-                          </h6>
+                          </p>
                           <p className="description mt-3">
                             We build intuitive websites to give the best user
                             experience. Our websites easy to use and dynamic.

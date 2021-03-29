@@ -22,15 +22,17 @@ class SocialMedia extends React.Component {
               <h1 className="text-primary special-title mb-2">
                 Thank you for supporting us!
               </h1>
-              <h4 className="mb-0 font-weight-light">Let's get in touch on</h4>
+              <h2 className="mb-0 font-weight-light">Let's get in touch on</h2>
             </Col>
             <Col className="text-lg-right btn-wrapper" lg="6">
               <Button
                 className="btn-icon-only rounded-circle"
                 color="twitter"
+                rel="noreferrer"
                 href="https://twitter.com/FatimaAMZIL9"
                 id="tooltip475038074"
                 target="_blank"
+                aria-label="Follow us on Twitter"
               >
                 <span className="btn-inner--icon">
                   <i className="fa fa-twitter" />
@@ -42,8 +44,10 @@ class SocialMedia extends React.Component {
               <Button
                 className="btn-icon-only rounded-circle ml-1"
                 color="facebook"
+                rel="noreferrer"
                 href="https://www.facebook.com/frontEndWorld/"
                 id="tooltip837440490"
+                aria-label="Follow us on Facebook"
                 target="_blank"
               >
                 <span className="btn-inner--icon">
@@ -56,8 +60,10 @@ class SocialMedia extends React.Component {
               <Button
                 className="btn-icon-only rounded-circle ml-1"
                 color="instagram"
+                rel="noreferrer"
                 href="https://www.instagram.com/the_frontend_world/"
                 id="tooltip837440414"
+                aria-label="Follow us on Instagram"
                 target="_blank"
               >
                 <span className="btn-inner--icon">
@@ -70,9 +76,11 @@ class SocialMedia extends React.Component {
               <Button
                 className="btn-icon-only rounded-circle ml-1"
                 color="facebook"
+                rel="noreferrer"
                 href="https://www.linkedin.com/in/fatima-amzil-9031ba95/"
                 id="tooltip837440424"
                 target="_blank"
+                aria-label="Follow us on Linkedin"
               >
                 <span className="btn-inner--icon">
                   <i className="fa fa-linkedin-square " />
@@ -84,8 +92,10 @@ class SocialMedia extends React.Component {
               <Button
                 className="btn-icon-only rounded-circle ml-1"
                 color="default"
+                rel="noreferrer"
                 href="https://famzil.medium.com/"
                 id="tooltip837440499"
+                aria-label="Follow us on Medium"
                 target="_blank"
               >
                 <span className="btn-inner--icon">
@@ -119,7 +129,9 @@ class SocialMedia extends React.Component {
                   <NavLink href="/Blog">Blog</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#" onClick={this.props.onClickContact}>Contact us</NavLink>
+                  <NavLink href="#" onClick={this.props.onClickContact}>
+                    Contact us
+                  </NavLink>
                 </NavItem>
               </Nav>
             </Col>

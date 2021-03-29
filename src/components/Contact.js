@@ -82,7 +82,7 @@ class Contact extends React.Component {
               <Col lg="8">
                 <Card className="bg-gradient-secondary shadow">
                   <CardBody className="p-lg-5">
-                    <h4 className="mb-1">Want to contact us?</h4>
+                    <h2 className="mb-1">Want to contact us?</h2>
                     <p className="mt-0">
                       Feel free to do so, you are welcomed.
                     </p>

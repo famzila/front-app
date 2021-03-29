@@ -67,7 +67,7 @@ class DemoNavbar extends React.Component {
                   src={require('assets/img/brand/logo.png').default}
                 />
               </NavbarBrand>
-              <button className="navbar-toggler" id="navbar_global">
+              <button className="navbar-toggler" id="navbar_global" aria-label="Menu">
                 <span className="navbar-toggler-icon" />
               </button>
               <UncontrolledCollapse
@@ -83,15 +83,9 @@ class DemoNavbar extends React.Component {
                       <Link to="/">
                         <img
                           alt="..."
-                          src={require('assets/img/brand/logo.png').default}
+                          src={require('assets/img/brand/logo1.png').default}
                         />
                       </Link>
-                    </Col>
-                    <Col className="collapse-close" xs="6">
-                      <button className="navbar-toggler" id="navbar_global">
-                        <span />
-                        <span />
-                      </button>
                     </Col>
                   </Row>
                 </div>
