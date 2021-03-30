@@ -37,7 +37,7 @@ class Collaborations extends React.Component {
                   <img
                     alt="..."
                     className="img-fluid rounded-circle shadow"
-                    src={require('assets/img/theme/logo-ineris.png').default}
+                    src={require('assets/img/theme/logo-ineris.jpg').default}
                     style={{ width: '150px' }}
                   />
                 </a>
@@ -47,7 +47,7 @@ class Collaborations extends React.Component {
                   <img
                     alt="..."
                     className="img-fluid rounded-circle shadow"
-                    src={require('assets/img/theme/logo-peps.png').default}
+                    src={require('assets/img/theme/logo-peps.jpg').default}
                     style={{ width: '150px' }}
                   />
                 </a>
@@ -57,7 +57,7 @@ class Collaborations extends React.Component {
                   <img
                     alt="..."
                     className="img-fluid rounded-circle shadow"
-                    src={require('assets/img/theme/logo-sncf.png').default}
+                    src={require('assets/img/theme/logo-sncf.jpg').default}
                     style={{ width: '150px' }}
                   />
                 </a>
@@ -67,7 +67,7 @@ class Collaborations extends React.Component {
                   <img
                     alt="..."
                     className="img-fluid rounded-circle shadow"
-                    src={require('assets/img/theme/logo-lacipav.png').default}
+                    src={require('assets/img/theme/logo-lacipav.jpg').default}
                     style={{ width: '150px' }}
                   />
                 </a>

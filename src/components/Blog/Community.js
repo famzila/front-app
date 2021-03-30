@@ -45,7 +45,7 @@ class Community extends React.Component {
                         <img
                           alt="..."
                           className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                          src={require('assets/img/theme/medium.png').default}
+                          src={require('assets/img/theme/medium.jpg').default}
                           style={{ width: '100px' }}
                         />
                       </a>

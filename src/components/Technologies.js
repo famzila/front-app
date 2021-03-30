@@ -19,7 +19,7 @@ class Technologies extends React.Component {
                   <img
                     alt="Angular"
                     className="img-fluid"
-                    src={require('assets/img/theme/angular-only.png').default}
+                    src={require('assets/img/theme/angular-only.jpg').default}
                   />
                 </div>
               </Col>
@@ -28,7 +28,7 @@ class Technologies extends React.Component {
                   <img
                     alt="React"
                     className="img-fluid"
-                    src={require('assets/img/theme/react.png').default}
+                    src={require('assets/img/theme/react.jpg').default}
                   />
                 </div>
               </Col>
@@ -37,7 +37,7 @@ class Technologies extends React.Component {
                   <img
                     alt="VueJs"
                     className="img-fluid"
-                    src={require('assets/img/theme/vuejs.png').default}
+                    src={require('assets/img/theme/vuejs.jpg').default}
                   />
                 </div>
               </Col>
@@ -46,7 +46,7 @@ class Technologies extends React.Component {
                   <img
                     alt="Typescript"
                     className="img-fluid"
-                    src={require('assets/img/theme/typescript.png').default}
+                    src={require('assets/img/theme/typescript.jpg').default}
                   />
                 </div>
               </Col>
@@ -55,7 +55,7 @@ class Technologies extends React.Component {
                   <img
                     alt="Bootstrap"
                     className="img-fluid"
-                    src={require('assets/img/theme/bootstrap.png').default}
+                    src={require('assets/img/theme/bootstrap.jpg').default}
                   />
                 </div>
               </Col>
@@ -64,7 +64,7 @@ class Technologies extends React.Component {
                   <img
                     alt="Wordpress"
                     className="img-fluid"
-                    src={require('assets/img/theme/wordpress.png').default}
+                    src={require('assets/img/theme/wordpress.jpg').default}
                   />
                 </div>
               </Col>

@@ -64,10 +64,14 @@ class DemoNavbar extends React.Component {
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
                 <img
                   alt="..."
-                  src={require('assets/img/brand/logo.png').default}
+                  src={require('assets/img/brand/logo.jpg').default}
                 />
               </NavbarBrand>
-              <button className="navbar-toggler" id="navbar_global" aria-label="Menu">
+              <button
+                className="navbar-toggler"
+                id="navbar_global"
+                aria-label="Menu"
+              >
                 <span className="navbar-toggler-icon" />
               </button>
               <UncontrolledCollapse
@@ -83,7 +87,7 @@ class DemoNavbar extends React.Component {
                       <Link to="/">
                         <img
                           alt="..."
-                          src={require('assets/img/brand/logo1.png').default}
+                          src={require('assets/img/brand/logo1.jpg').default}
                         />
                       </Link>
                     </Col>
@@ -120,7 +124,7 @@ class DemoNavbar extends React.Component {
                               alt="..."
                               className="img-fluid"
                               src={
-                                require('assets/img/theme/angular.png').default
+                                require('assets/img/theme/angular.jpg').default
                               }
                             />
                           </div>
@@ -143,7 +147,7 @@ class DemoNavbar extends React.Component {
                               alt="..."
                               className="img-fluid"
                               src={
-                                require('assets/img/theme/react.png').default
+                                require('assets/img/theme/react.jpg').default
                               }
                             />
                           </div>
@@ -166,7 +170,7 @@ class DemoNavbar extends React.Component {
                               alt="..."
                               className="img-fluid"
                               src={
-                                require('assets/img/theme/vuejs.png').default
+                                require('assets/img/theme/vuejs.jpg').default
                               }
                             />
                           </div>
@@ -248,6 +252,7 @@ class DemoNavbar extends React.Component {
                       className="nav-link-icon"
                       href="https://www.facebook.com/frontEndWorld/"
                       id="tooltip333589074"
+                      rel="noreferrer"
                       target="_blank"
                     >
                       <i className="fa fa-facebook-square" />
@@ -264,6 +269,7 @@ class DemoNavbar extends React.Component {
                       className="nav-link-icon"
                       href="https://www.instagram.com/the_frontend_world/"
                       id="tooltip356693867"
+                      rel="noreferrer"
                       target="_blank"
                     >
                       <i className="fa fa-instagram" />
@@ -281,6 +287,7 @@ class DemoNavbar extends React.Component {
                       href="https://twitter.com/FatimaAMZIL9"
                       id="tooltip184698705"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <i className="fa fa-twitter-square" />
                       <span className="nav-link-inner--text d-lg-none ml-2">
@@ -296,6 +303,7 @@ class DemoNavbar extends React.Component {
                       className="nav-link-icon"
                       href="https://www.linkedin.com/in/fatima-amzil-9031ba95/"
                       id="tooltip184698707"
+                      rel="noreferrer"
                       target="_blank"
                     >
                       <i className="fa fa-linkedin-square " />
@@ -312,6 +320,7 @@ class DemoNavbar extends React.Component {
                       className="nav-link-icon"
                       href="https://famzil.medium.com"
                       id="tooltip184698799"
+                      rel="noreferrer"
                       target="_blank"
                     >
                       <i className="fa fa-medium " />

@@ -42,7 +42,7 @@ class Banner extends React.Component {
                     <img
                       alt="..."
                       className="img-fluid"
-                      src={require('assets/img/brand/logo.png').default}
+                      src={require('assets/img/brand/logo.jpg').default}
                       style={{ width: '200px' }}
                     />
                     <h2 className="special-title text-white">

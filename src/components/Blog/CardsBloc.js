@@ -31,7 +31,7 @@ class CardsBloc extends React.Component {
                             <CardImg
                               alt="..."
                               src={
-                                require(`assets/img/theme/${this.state.type}-core.png`)
+                                require(`assets/img/theme/${this.state.type}-core.jpg`)
                                   .default
                               }
                             />
@@ -44,7 +44,7 @@ class CardsBloc extends React.Component {
                             <CardImg
                               alt="..."
                               src={
-                                require(`assets/img/theme/${this.state.type}-tips.png`)
+                                require(`assets/img/theme/${this.state.type}-tips.jpg`)
                                   .default
                               }
                             />
@@ -59,7 +59,7 @@ class CardsBloc extends React.Component {
                             <CardImg
                               alt="..."
                               src={
-                                require(`assets/img/theme/${this.state.type}-optimization.png`)
+                                require(`assets/img/theme/${this.state.type}-optimization.jpg`)
                                   .default
                               }
                             />
