@@ -41,9 +41,9 @@ class About extends React.Component {
                               </Badge>
                             </div>
                             <div>
-                              <h6 className="info-title text-uppercase text-default">
+                              <p className="info-title text-uppercase text-default">
                                 Clean code
-                              </h6>
+                              </p>
                             </div>
                           </div>
                         </li>
@@ -58,9 +58,9 @@ class About extends React.Component {
                               </Badge>
                             </div>
                             <div>
-                              <h6 className="info-title text-uppercase text-default">
+                              <p className="info-title text-uppercase text-default">
                                 Amazing designes
-                              </h6>
+                              </p>
                             </div>
                           </div>
                         </li>
@@ -75,9 +75,9 @@ class About extends React.Component {
                               </Badge>
                             </div>
                             <div>
-                              <h6 className="info-title text-uppercase text-default">
+                              <p className="info-title text-uppercase text-default">
                                 Super communication
-                              </h6>
+                              </p>
                             </div>
                           </div>
                         </li>
@@ -96,9 +96,9 @@ class About extends React.Component {
                               </Badge>
                             </div>
                             <div>
-                              <h6 className="info-title text-uppercase text-default">
+                              <p className="info-title text-uppercase text-default">
                                 Front-end techs
-                              </h6>
+                              </p>
                             </div>
                           </div>
                         </li>
@@ -113,9 +113,9 @@ class About extends React.Component {
                               </Badge>
                             </div>
                             <div>
-                              <h6 className="info-title text-uppercase text-default">
+                              <p className="info-title text-uppercase text-default">
                                 Content management
-                              </h6>
+                              </p>
                             </div>
                           </div>
                         </li>
@@ -130,9 +130,9 @@ class About extends React.Component {
                               </Badge>
                             </div>
                             <div>
-                              <h6 className="info-title text-uppercase text-default">
+                              <p className="info-title text-uppercase text-default">
                                 Mobile friendly design
-                              </h6>
+                              </p>
                             </div>
                           </div>
                         </li>
@@ -151,9 +151,9 @@ class About extends React.Component {
                               </Badge>
                             </div>
                             <div>
-                              <h6 className="info-title text-uppercase text-default">
+                              <p className="info-title text-uppercase text-default">
                                 Website analytics
-                              </h6>
+                              </p>
                             </div>
                           </div>
                         </li>
@@ -168,9 +168,9 @@ class About extends React.Component {
                               </Badge>
                             </div>
                             <div>
-                              <h6 className="info-title text-uppercase text-default">
+                              <p className="info-title text-uppercase text-default">
                                 Website audits
-                              </h6>
+                              </p>
                             </div>
                           </div>
                         </li>
@@ -185,9 +185,9 @@ class About extends React.Component {
                               </Badge>
                             </div>
                             <div>
-                              <h6 className="info-title text-uppercase text-default">
+                              <p className="info-title text-uppercase text-default">
                                 e-Commerce websites
-                              </h6>
+                              </p>
                             </div>
                           </div>
                         </li>
