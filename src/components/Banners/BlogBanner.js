@@ -42,7 +42,8 @@ class BlogBanner extends React.Component {
                       alt="FRONT"
                       className="img-fluid"
                       src={require('assets/img/brand/logo.png').default}
-                      style={{ width: '200px' }}
+                      height="30px"
+                      width="100px"
                     />
                     <h1 className="special-title text-white">
                       Welcome, ... discover, learn and enjoy!
