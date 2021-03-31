@@ -178,7 +178,11 @@ class Banner extends React.Component {
                               Small-devices
                             </Badge>
                           </div>
-                          <Button className="mt-4" color="info" onClick={this.props.onClick}>
+                          <Button
+                            className="mt-4"
+                            color="info"
+                            onClick={this.props.onClick}
+                          >
                             Learn more
                           </Button>
                         </CardBody>
