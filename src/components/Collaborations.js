@@ -33,9 +33,15 @@ class Collaborations extends React.Component {
             </Row>
             <Row>
               <Col sm="3" xs="6">
-                <a href="https://www.ineris.fr/en" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.ineris.fr/en"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     alt="..."
+                    width="150px"
+                    height="150px"
                     className="img-fluid rounded-circle shadow"
                     src={require('assets/img/theme/logo-ineris.jpg').default}
                     style={{ width: '150px' }}
@@ -43,9 +49,15 @@ class Collaborations extends React.Component {
                 </a>
               </Col>
               <Col sm="3" xs="6">
-                <a href="https://peps.paris.fr/peps/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://peps.paris.fr/peps/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     alt="..."
+                    width="150px"
+                    height="150px"
                     className="img-fluid rounded-circle shadow"
                     src={require('assets/img/theme/logo-peps.jpg').default}
                     style={{ width: '150px' }}
@@ -53,9 +65,15 @@ class Collaborations extends React.Component {
                 </a>
               </Col>
               <Col sm="3" xs="6">
-                <a href="https://www.sncf-reseau.com/en" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.sncf-reseau.com/en"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     alt="..."
+                    width="150px"
+                    height="150px"
                     className="img-fluid rounded-circle shadow"
                     src={require('assets/img/theme/logo-sncf.jpg').default}
                     style={{ width: '150px' }}
@@ -63,9 +81,15 @@ class Collaborations extends React.Component {
                 </a>
               </Col>
               <Col sm="3" xs="6">
-                <a href="https://www.lacipav.fr/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.lacipav.fr/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     alt="..."
+                    width="150px"
+                    height="150px"
                     className="img-fluid rounded-circle shadow"
                     src={require('assets/img/theme/logo-lacipav.jpg').default}
                     style={{ width: '150px' }}

@@ -18,6 +18,8 @@ class Technologies extends React.Component {
                 <div className="">
                   <img
                     alt="Angular"
+                    width="70px"
+                    height="57px"
                     className="img-fluid"
                     src={require('assets/img/theme/angular-only.jpg').default}
                   />
@@ -27,6 +29,8 @@ class Technologies extends React.Component {
                 <div className="">
                   <img
                     alt="React"
+                    width="70px"
+                    height="57px"
                     className="img-fluid"
                     src={require('assets/img/theme/react.jpg').default}
                   />
@@ -36,6 +40,8 @@ class Technologies extends React.Component {
                 <div className="">
                   <img
                     alt="VueJs"
+                    width="70px"
+                    height="57px"
                     className="img-fluid"
                     src={require('assets/img/theme/vuejs.jpg').default}
                   />
@@ -54,6 +60,8 @@ class Technologies extends React.Component {
                 <div className="">
                   <img
                     alt="Bootstrap"
+                    width="70px"
+                    height="57px"
                     className="img-fluid"
                     src={require('assets/img/theme/bootstrap.jpg').default}
                   />
@@ -63,6 +71,8 @@ class Technologies extends React.Component {
                 <div className="">
                   <img
                     alt="Wordpress"
+                    width="70px"
+                    height="57px"
                     className="img-fluid"
                     src={require('assets/img/theme/wordpress.jpg').default}
                   />

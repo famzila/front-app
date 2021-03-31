@@ -1,4 +1,5 @@
 const express = require('express');
+const compression = require('compression');
 const cors = require('cors');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -6,6 +7,8 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const articlesRouter = require('./routes/articles.js');
 const contactsRouter = require('./routes/contacts.js');
+
+
 
 // Express port
 const port = process.env.PORT || 5000;
@@ -29,6 +32,26 @@ connection
 // start app
 const app = express();
 
+const shouldCompress = (req, res) => {
+    if (req.headers['x-no-compression']) {
+      // Will not compress responses, if this header is present
+      return false;
+    }
+    // Resort to standard compression
+    return compression.filter(req, res);
+};
+
+// Compress all HTTP responses
+app.use(compression({
+    // filter: Decide if the answer should be compressed or not,
+    // depending on the 'shouldCompress' function above
+    filter: shouldCompress,
+    // threshold: It is the byte threshold for the response 
+    // body size before considering compression, the default is 1 kB
+    threshold: 0
+}));
+
+  
 // CORS
 app.use(cors());
 // Body Parser Middleware
