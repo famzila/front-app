@@ -15,7 +15,7 @@ class CardsFooter extends React.Component {
                 <Card className="card-lift--hover shadow border-0">
                   <Link to="/courses/angular">
                     <CardImg
-                      alt="..."
+                      alt="Courses"
                       src={
                         require('assets/img/theme/angular-courses.jpg').default
                       }
@@ -27,7 +27,7 @@ class CardsFooter extends React.Component {
                 <Card className="card-lift--hover shadow border-0">
                   <Link to="/courses/basics">
                     <CardImg
-                      alt="..."
+                      alt="Courses"
                       src={
                         require('assets/img/theme/basics-courses.jpg').default
                       }

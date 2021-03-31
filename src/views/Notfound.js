@@ -35,7 +35,7 @@ class Notfound extends React.PureComponent{
                   <Card className="card-plain shadow border-0">
                     <Link to="/">
                       <CardImg
-                        alt="..."
+                        alt="Not found"
                         src={
                           require('assets/img/theme/not-found-error.jpg')
                             .default

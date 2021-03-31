@@ -10,9 +10,7 @@ class Technologies extends React.Component {
       <>
         <section className="section section-lg">
           <Container className="text-center">
-            <h1 className="special-title text-primary pb-5">
-              Technologies
-            </h1>
+            <h1 className="special-title text-primary pb-5">Technologies</h1>
             <Row className="justify-content-between">
               <Col md="1">
                 <div className="">
@@ -52,6 +50,8 @@ class Technologies extends React.Component {
                   <img
                     alt="Typescript"
                     className="img-fluid"
+                    width="70px"
+                    height="57px"
                     src={require('assets/img/theme/typescript.jpg').default}
                   />
                 </div>

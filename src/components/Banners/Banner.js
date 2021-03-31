@@ -40,7 +40,7 @@ class Banner extends React.Component {
                 <Row className="align-items-center justify-content-center">
                   <Col className="text-center" lg="8">
                     <img
-                      alt="..."
+                      alt="FRONT"
                       className="img-fluid"
                       src={require('assets/img/brand/logo.png').default}
                       style={{ width: '200px' }}

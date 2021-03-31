@@ -24,7 +24,7 @@ class Community extends React.Component {
                         rel="noreferrer"
                       >
                         <img
-                          alt="..."
+                          alt="Linkedin"
                           className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                           src={
                             require('assets/img/theme/team-2-800x800.jpg')
@@ -43,7 +43,7 @@ class Community extends React.Component {
                         rel="noreferrer"
                       >
                         <img
-                          alt="..."
+                          alt="Medium"
                           className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                           src={require('assets/img/theme/medium.jpg').default}
                           style={{ width: '100px' }}
@@ -59,7 +59,7 @@ class Community extends React.Component {
                         rel="noreferrer"
                       >
                         <img
-                          alt="..."
+                          alt="Twitter"
                           className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                           src={
                             require('assets/img/theme/team-3-800x800.jpg')
@@ -78,7 +78,7 @@ class Community extends React.Component {
                         rel="noreferrer"
                       >
                         <img
-                          alt="..."
+                          alt="Facebook"
                           className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                           src={
                             require('assets/img/theme/team-4-800x800.jpg')

@@ -29,7 +29,7 @@ class CardsBloc extends React.Component {
                         <Card className="card-lift--hover shadow border-0">
                           <Link to={`/blog/articles/${this.state.type}/core`}>
                             <CardImg
-                              alt="..."
+                              alt="Core"
                               src={
                                 require(`assets/img/theme/${this.state.type}-core.jpg`)
                                   .default
@@ -42,7 +42,7 @@ class CardsBloc extends React.Component {
                         <Card className="card-lift--hover shadow border-0">
                           <Link to={`/blog/articles/${this.state.type}/tips`}>
                             <CardImg
-                              alt="..."
+                              alt="Tips and Tricks"
                               src={
                                 require(`assets/img/theme/${this.state.type}-tips.jpg`)
                                   .default
@@ -57,7 +57,7 @@ class CardsBloc extends React.Component {
                             to={`/blog/articles/${this.state.type}/optimization`}
                           >
                             <CardImg
-                              alt="..."
+                              alt="User experience and Optimization"
                               src={
                                 require(`assets/img/theme/${this.state.type}-optimization.jpg`)
                                   .default

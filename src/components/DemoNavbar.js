@@ -63,7 +63,7 @@ class DemoNavbar extends React.Component {
             <Container>
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
                 <img
-                  alt="..."
+                  alt="Front"
                   height="30px"
                   width="100px"
                   src={require('assets/img/brand/logo.png').default}
@@ -88,7 +88,9 @@ class DemoNavbar extends React.Component {
                     <Col className="collapse-brand" xs="6">
                       <Link to="/">
                         <img
-                          alt="..."
+                          alt="Front"
+                          height="30px"
+                          width="100px"
                           src={require('assets/img/brand/logo1.png').default}
                         />
                       </Link>

@@ -136,7 +136,7 @@ class AddArticle extends React.Component {
                 <Col md="6">
                   <Card className="bg-default shadow border-0">
                     <CardImg
-                      alt="..."
+                      alt="New article"
                       src={
                         require('assets/img/theme/img-1-1200x1000.jpg').default
                       }

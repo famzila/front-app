@@ -39,7 +39,7 @@ class Collaborations extends React.Component {
                   rel="noreferrer"
                 >
                   <img
-                    alt="..."
+                    alt="INERIS"
                     width="150px"
                     height="150px"
                     className="img-fluid rounded-circle shadow"
@@ -55,7 +55,7 @@ class Collaborations extends React.Component {
                   rel="noreferrer"
                 >
                   <img
-                    alt="..."
+                    alt="PEPS"
                     width="150px"
                     height="150px"
                     className="img-fluid rounded-circle shadow"
@@ -71,7 +71,7 @@ class Collaborations extends React.Component {
                   rel="noreferrer"
                 >
                   <img
-                    alt="..."
+                    alt="RESEAU SNCF"
                     width="150px"
                     height="150px"
                     className="img-fluid rounded-circle shadow"
@@ -87,7 +87,7 @@ class Collaborations extends React.Component {
                   rel="noreferrer"
                 >
                   <img
-                    alt="..."
+                    alt="LaCipav"
                     width="150px"
                     height="150px"
                     className="img-fluid rounded-circle shadow"
