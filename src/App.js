@@ -25,7 +25,9 @@ function App() {
         fallback={
           <div class="text-center">
             <Spinner type="grow">
-              <span className="sr-only" size="lg">Loading...</span>{' '}
+              <span className="sr-only" size="lg">
+                Loading...
+              </span>{' '}
             </Spinner>
           </div>
         }
