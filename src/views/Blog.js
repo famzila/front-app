@@ -1,11 +1,9 @@
 import React from 'react';
 
 // core components
-import CardsFooter from '../components/Footers/CardsFooter.js';
 import Contact from '../components/Contact.js';
 
 // index page sections
-import DemoNavbar from 'components/DemoNavbar.js';
 import BlogBanner from '../components/Banners/BlogBanner.js';
 import CardsBloc from '../components/Blog/CardsBloc.js';
 
@@ -31,7 +29,6 @@ class Blog extends React.Component {
   render() {
     return (
       <>
-        <DemoNavbar about="0" />
         <main ref="main">
           <BlogBanner
             onClick={this.handleReadClick}
@@ -47,7 +44,6 @@ class Blog extends React.Component {
           <Contact ref={this.contact} />
           <CardsBloc type="professional" title="Professional life Trends" />
         </main>
-        <CardsFooter onClickContact={this.handleContactClick} />
       </>
     );
   }

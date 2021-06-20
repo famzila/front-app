@@ -1,73 +1,25 @@
 import React from 'react';
-import axios from 'axios';
 
 // reactstrap components
 import { Container, Row, Col } from 'reactstrap';
 import Contact from '../components/Contact';
-import Post from 'components/Blog/Post.js';
+import Timeline from 'components/Timeline.js';
+import Book from '../components/Book.js';
 
-class ArticlesList extends React.Component {
+class Books extends React.Component {
   constructor(props) {
     super(props);
-    this.contact = React.createRef();
     this.state = {
-      type: this.props.match.params.type,
-      tag: this.props.match.params.tag,
-      articles: [],
+      book: this.props.match.params.book,
     };
-  }
-  handleContactClick = () => {
-    this.contact.current.goToContact();
-  };
-
-  shuffle = (array) => {
-    let i = array.length - 1;
-    for (i; i > 0; i--) {
-      const j = Math.floor(Math.random() * i);
-      const temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
-    }
-  };
-
-  getArticles() {
-    let url = '';
-    let base_url = window.location.origin;
-    if (process.env.NODE_ENV !== 'production') {
-      base_url = process.env.REACT_APP_LOCAL;
-    }
-    if (this.props.match.params.type === 'professional') {
-      url = `${base_url}/articles/${this.props.match.params.type}`;
-    } else {
-      url = `${base_url}/articles/${this.props.match.params.type}/${this.props.match.params.tag}`;
-    }
-    axios
-      .get(url)
-      .then((res) => {
-        if (res.data.length > 0) {
-          this.shuffle(res.data);
-          console.log('Articles: ', res.data);
-          this.setState({ articles: res.data });
-        }
-      })
-      .catch((error) => {
-        console.error(`Error while fetching articles: ${error}`);
-      });
-  }
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-    this.getArticles();
   }
   render() {
     return (
       <>
         <main ref="main">
           <div className="position-relative">
-            {/* shape Hero */}
             <section className="section section-lg section-shaped pb-25">
-              <div className="shape shape-style-1 shape-default">
+              <div className="shape shape-style-1 shape-primary">
                 <span />
                 <span />
                 <span />
@@ -84,7 +36,7 @@ class ArticlesList extends React.Component {
                     <Col lg="12">
                       <h1 className="display-3 text-white">
                         Read, discover, learn and find a better you!
-                        <span>Articles from talented people</span>
+                        <span>Courses from talented developers</span>
                       </h1>
                       <p className="lead text-white">
                         In technology's world everything is in a race, things
@@ -105,18 +57,28 @@ class ArticlesList extends React.Component {
                   y="0"
                 >
                   <polygon
-                    className="fill-white"
+                    className="fill-secondary"
                     points="2560 0 2560 100 0 100"
                   />
                 </svg>
               </div>
             </section>
           </div>
-          <section className="section">
+
+          <section className="section bg-secondary text-center pb-15">
             <Container>
-              <Post posts={this.state.articles} />
+              <h1 className="special-title text-primary">
+                {' '}
+                Your path to web development...
+              </h1>
+              <h3>Courses from talented developers and engineers</h3>
             </Container>
           </section>
+          {this.state.book === undefined ? (
+            <Timeline />
+          ) : (
+            <Book book={this.state.book} />
+          )}
           <Contact ref={this.contact} />
         </main>
       </>
@@ -124,4 +86,4 @@ class ArticlesList extends React.Component {
   }
 }
 
-export default ArticlesList;
+export default Books;

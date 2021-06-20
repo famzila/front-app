@@ -18,8 +18,6 @@ import {
   Col,
 } from 'reactstrap';
 
-import CardsFooter from '../components/Footers/CardsFooter.js';
-
 class AddArticle extends React.Component {
   constructor(props) {
     super(props);
@@ -327,7 +325,6 @@ class AddArticle extends React.Component {
             </Container>
           </section>
         </main>
-        <CardsFooter />
       </>
     );
   }

@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 // reactstrap components
 import { CardImg, Card, Container, Row, Col } from 'reactstrap';
 
-// core components
-
-import SimpleFooter from '../components/Footers/SimpleFooter.js';
-
 class Notfound extends React.PureComponent{
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -55,7 +51,6 @@ class Notfound extends React.PureComponent{
             </Container>
           </section>
         </main>
-        <SimpleFooter />
       </>
     );
   }

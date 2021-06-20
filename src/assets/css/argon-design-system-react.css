@@ -6637,6 +6637,14 @@ a.close.disabled {
   animation: spinner-grow 0.75s linear infinite;
 }
 
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    background-color: white;
+}
+
 .spinner-grow-sm {
   width: 1rem;
   height: 1rem;

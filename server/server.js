@@ -7,6 +7,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const articlesRouter = require('./routes/articles.js');
 const contactsRouter = require('./routes/contacts.js');
+const booksRouter = require('./routes/books.js');
 
 // Express port
 const port = process.env.PORT || 5000;
@@ -58,6 +59,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/articles', articlesRouter);
 app.use('/contacts', contactsRouter);
+app.use('/books', booksRouter);
 
 app.use(express.static(path.join(__dirname, '../build')));
 app.get('/*', (req, res) => {

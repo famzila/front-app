@@ -116,22 +116,14 @@ class SocialMedia extends React.Component {
             </Col>
             <Col md="6">
               <Nav className="nav-footer justify-content-end">
-                {this.props.about === '1' ? (
-                  <NavItem>
-                    <NavLink href="#" onClick={this.props.onClick}>
-                      About us
-                    </NavLink>
-                  </NavItem>
-                ) : (
-                  ''
-                )}
                 <NavItem>
-                  <NavLink href="/Blog">Blog</NavLink>
+                  <NavLink href="/express-courses">EXPRESS COURSES</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#" onClick={this.props.onClickContact}>
-                    Contact us
-                  </NavLink>
+                  <NavLink href="/e-books">E-BOOKS</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/blog">BLOG</NavLink>
                 </NavItem>
               </Nav>
             </Col>

@@ -64,7 +64,7 @@ class Contact extends React.Component {
   render() {
     return (
       <>
-        <section className="section section-lg bg-gradient-default mb-5">
+        <section className="section section-lg bg-gradient-default mb-5 mt-10">
           <Container className="pt-lg pb-300">
             <Row className="text-center justify-content-center">
               <Col lg="10">
