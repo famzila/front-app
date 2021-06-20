@@ -75,7 +75,7 @@ class Header extends React.Component {
                   src={require('assets/img/brand/logo.png').default}
                 />
               </NavbarBrand>
-              <button className="navbar-toggler" id="navbar_global">
+              <button className="navbar-toggler" id="navbar_global" name="navbar toggler">
                 <span className="navbar-toggler-icon" />
               </button>
               <UncontrolledCollapse
