@@ -75,7 +75,11 @@ class Header extends React.Component {
                   src={require('assets/img/brand/logo.png').default}
                 />
               </NavbarBrand>
-              <button className="navbar-toggler" id="navbar_global" name="navbar toggler">
+              <button
+                className="navbar-toggler"
+                id="navbar_global"
+                aria-label="navbar toggler"
+              >
                 <span className="navbar-toggler-icon" />
               </button>
               <UncontrolledCollapse
@@ -96,7 +100,11 @@ class Header extends React.Component {
                       </Link>
                     </Col>
                     <Col className="collapse-close" xs="6">
-                      <button className="navbar-toggler" id="navbar_global">
+                      <button
+                        className="navbar-toggler"
+                        aria-label="navbar toggler"
+                        id="navbar_global"
+                      >
                         <span />
                         <span />
                       </button>
@@ -140,7 +148,8 @@ class Header extends React.Component {
                       <span className="nav-link-inner--text">BLOG</span>
                     </NavLink>
                     <UncontrolledTooltip delay={0} target="tooltip333589075">
-                      High quality articles to keep you updated and stay tuned with frontend tech and news.
+                      High quality articles to keep you updated and stay tuned
+                      with frontend tech and news.
                     </UncontrolledTooltip>
                   </NavItem>
                   {/* {this.state.showExtraLinks === true ? (
