@@ -16,9 +16,9 @@ class About extends React.Component {
         <section id="about" className="section">
           <Container>
             <Row className="row-grid text-center">
-              <Col className="order-md-1" md="12">
+              <Col className="order-md-1" md="5">
                 <div className="pr-md-5">
-                  <h1 className="special-title text-warning pb-2">About us</h1>
+            <h1 className="special-title text-warning pb-5">About us</h1>
                   <p className="lead pb-5">
                     I'm a passionate web developer and software engineer based
                     in France. I have more than 4 years of experience, I worked
@@ -27,7 +27,19 @@ class About extends React.Component {
                     brands brainstorm their website based on their goals.
                   </p>
                   <h1 className="text-warning special-title">Skills</h1>
-                  <Row className="row-grid text-center pb-5">
+                </div>
+              </Col>
+              <Col className="order-md-2" md="7">
+                <img
+                  alt="..."
+                  className="img-fluid floating"
+                  src={
+                    require(`assets/img/about-me.gif`).default
+                  }
+                            />
+              </Col>
+                    </Row>
+                    <Row className="row-grid text-center m--3">
                     <Col className="order-md-1" md="4">
                       <ul className="list-unstyled mt-5">
                         <li className="py-2">
@@ -194,9 +206,7 @@ class About extends React.Component {
                       </ul>
                     </Col>
                   </Row>
-                </div>
-              </Col>
-            </Row>
+            
           </Container>
         </section>
       </>
