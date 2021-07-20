@@ -7,7 +7,14 @@ import InputGroupAddon from 'reactstrap/lib/InputGroupAddon';
 import InputGroupText from 'reactstrap/lib/InputGroupText';
 
 // reactstrap components
-import { Button, Container, Row, Col, Form } from 'reactstrap';
+import {
+  Button,
+  Container,
+  Row,
+  Col,
+  Form,
+  UncontrolledAlert,
+} from 'reactstrap';
 import classnames from 'classnames';
 import axios from 'axios';
 
@@ -41,6 +48,7 @@ class Book extends React.Component {
       axios
         .post(`${base_url}/books/send`, newSentBook)
         .then((res) => {
+          console.log('Book: ', res);
           this.setState({
             sentBook: true,
           });
@@ -280,7 +288,7 @@ class Book extends React.Component {
                     >
                       <span>
                         I agree with the{' '}
-                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                        <a href="/" onClick={(e) => e.preventDefault()}>
                           Privacy Policy
                         </a>
                       </span>
@@ -297,6 +305,20 @@ class Book extends React.Component {
                 >
                   Send me the book
                 </Button>
+                {this.state.sentBook ? (
+                  <div className="mt-5">
+                    <UncontrolledAlert color="success" fade={true}>
+                      <span className="alert-inner--icon">
+                        <i className="ni ni-like-2" />
+                      </span>
+                      <span className="alert-inner--text ml-1">
+                        <strong> Thank you!</strong> Check your mailbox!
+                      </span>
+                    </UncontrolledAlert>
+                  </div>
+                ) : (
+                  ''
+                )}
               </div>
             </Form>
           </Container>
