@@ -44,7 +44,6 @@ class Book extends React.Component {
         name: this.props.book,
         email: submitedEmail,
       };
-      console.log(newSentBook);
       axios
         .post(`${base_url}/books/send`, newSentBook)
         .then((res) => {
