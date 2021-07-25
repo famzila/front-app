@@ -39,6 +39,8 @@ class Book extends React.Component {
       let base_url = '/';
       if (process.env.NODE_ENV !== 'production') {
         base_url = process.env.REACT_APP_LOCAL;
+      } else {
+        base_url = process.env.REACT_APP_PROD;
       }
       const newSentBook = {
         name: this.props.book,
