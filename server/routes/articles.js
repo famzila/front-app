@@ -83,7 +83,7 @@ router.route('/update/:id').post((req, res) => {
       articles.type = Date.parse(req.body.type);
       articles.tags = Date.parse(req.body.tags);
 
-      exercise
+      articles
         .save()
         .then(() => res.json('Article updated!'))
         .catch((err) => res.status(400).json('Error: ' + err));
