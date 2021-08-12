@@ -70,6 +70,7 @@ async function sendMail(name, email) {
     const transport = nodemailer.createTransport({
       service: 'gmail',
       secure: false,
+      port: 465,
       auth: {
         type: 'OAuth2',
         user: CLIENT_EMAIL,
