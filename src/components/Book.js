@@ -25,6 +25,8 @@ class Book extends React.Component {
       email: '',
       acceptPolicy: false,
       sentBook: false,
+      sending: false,
+      issue: false,
     };
   }
   // Handle form submission
@@ -32,6 +34,8 @@ class Book extends React.Component {
     event.preventDefault();
     this.setState({
       sentBook: false,
+      sending: true,
+      issue: false,
     });
     const submitedEmail = event.target.elements.email.value;
     const subAcceptPolicy = event.target.elements.acceptPolicy.checked;
@@ -46,16 +50,22 @@ class Book extends React.Component {
         name: this.props.book,
         email: submitedEmail,
       };
+
       axios
         .post(`${base_url}/books/send`, newSentBook)
         .then((res) => {
-          console.log('Book: ', res);
           this.setState({
             sentBook: true,
+            sending: false,
           });
         })
         .catch((error) => {
           console.error(`Error while sending Book email: ${error}`);
+          this.setState({
+            sentBook: false,
+            sending: false,
+            issue: false,
+          });
         });
     }
   };
@@ -254,7 +264,7 @@ class Book extends React.Component {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Email address"
+                        placeholder="example@mail.com"
                         type="email"
                         name="email"
                         onChange={(e) =>
@@ -316,6 +326,27 @@ class Book extends React.Component {
                         <strong> Thank you!</strong> Check your mailbox!
                       </span>
                     </UncontrolledAlert>
+                  </div>
+                ) : (
+                  ''
+                )}
+                {this.state.issue ? (
+                  <div className="mt-5">
+                    <UncontrolledAlert color="danger" fade={true}>
+                      <span className="alert-inner--icon">
+                        <i class="ni ni-bold-right"></i>
+                      </span>
+                      <span className="alert-inner--text ml-1">
+                        <strong> Ops!</strong> Sorry, something went wrong!
+                      </span>
+                    </UncontrolledAlert>
+                  </div>
+                ) : (
+                  ''
+                )}
+                {this.state.sending ? (
+                  <div className="mt-5">
+                    <div className="spinner-border"></div>
                   </div>
                 ) : (
                   ''
