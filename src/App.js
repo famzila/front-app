@@ -1,5 +1,6 @@
 import React, { lazy } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import PageMap from 'react-pagemap';
 import ReactGA from 'react-ga';
 // reactstrap components
 import { Spinner } from 'reactstrap';
@@ -39,6 +40,7 @@ class App extends React.Component {
   render() {
     return (
       <>
+        <PageMap />
         <React.Suspense
           fallback={
             <div className="text-center">
@@ -47,7 +49,10 @@ class App extends React.Component {
           }
         >
           <BrowserRouter>
-            <Header onContactClick={this.handleContactClick} onAboutClick={this.handleAboutClick} />
+            <Header
+              onContactClick={this.handleContactClick}
+              onAboutClick={this.handleAboutClick}
+            />
             <Switch>
               <Route path="/" exact render={(props) => <Home {...props} />} />
               <Route
@@ -71,7 +76,7 @@ class App extends React.Component {
                 exact
                 render={(props) => <CoursesComponent {...props} />}
               />
-                        <Route
+              <Route
                 path="/e-books"
                 exact
                 render={(props) => <BooksComponent {...props} />}
